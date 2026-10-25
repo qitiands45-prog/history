@@ -61,7 +61,16 @@
 @media print{.access-bar,.save-notice{display:none}}
 </style>
 </head>
+@media print{.access-bar,.save-notice{display:none}}
+</style>
+</head>
 <body>
+<script>
+  if (localStorage.getItem('quiz_unlocked') !== 'true') {
+    alert('请先输入密码验证！');
+    window.location.href = 'index.html'; 
+  }
+</script>
 <div class="page-shell">
   <header class="masthead"><a class="brand" href="./" id="home-link" aria-label="时光来信，返回封面"><span class="brand-symbol" aria-hidden="true">✳</span>时光来信<span class="brand-en">TIME & YOU</span></a><button id="about-button" class="text-button">人物库 <span aria-hidden="true">↗</span></button></header>
   <nav id="edition-nav" class="edition-nav" aria-label="选择人物版本"></nav>
